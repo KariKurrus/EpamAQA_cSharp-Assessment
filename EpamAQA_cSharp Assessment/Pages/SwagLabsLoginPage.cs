@@ -28,26 +28,26 @@ namespace EpamAQA_cSharp_Assessment.Pages
             return _passwordField.GetAttribute("value");
         }
 
-        public void SetUsernameAttribute(string value)
+        public void EnterUsername(string value)
         {
             _usernameField.WaitUntilExist();
             _usernameField.SendKeys(value);
         }
 
-        public void SetPasswordAttribute(string value)
+        public void EnterPassword(string value)
         {
             _passwordField.WaitUntilExist();
             _passwordField.SendKeys(value);
         }
 
-        public void RemoveFromUsernameAttribute()
+        public void ClearUsernameInput()
         {
             _usernameField.WaitUntilExist();
             _usernameField.SendKeys(Keys.Control + "A");
             _usernameField.SendKeys(Keys.Delete);
         }
 
-        public void RemoveFromPasswordAttribute()
+        public void ClearPasswordInput()
         {
             _passwordField.WaitUntilExist();
             _passwordField.SendKeys(Keys.Control + "A");

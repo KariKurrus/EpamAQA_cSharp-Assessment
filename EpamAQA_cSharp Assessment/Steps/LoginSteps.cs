@@ -15,25 +15,25 @@ namespace EpamAQA_cSharp_Assessment.Steps
 
         public void LoggingWithEmptyCredentials(string inputCredentials)
         {
-            _swagLabsLoginPage.SetUsernameAttribute(inputCredentials);
+            _swagLabsLoginPage.EnterUsername(inputCredentials);
 
-            _swagLabsLoginPage.RemoveFromUsernameAttribute();
+            _swagLabsLoginPage.ClearUsernameInput();
 
             _swagLabsLoginPage.ClickOnLoginButton();
         }
 
         public void LoggingWithCredentialsPassingTheUsername(string inputCredentials)
         {
-            _swagLabsLoginPage.SetUsernameAttribute(inputCredentials);
+            _swagLabsLoginPage.EnterUsername(inputCredentials);
 
             _swagLabsLoginPage.ClickOnLoginButton();
         }
 
         public void LoggingWithCredentialsPassingThePasswordAndUsername(string inputCredentials, string inputPassword)
         {
-            _swagLabsLoginPage.SetUsernameAttribute(inputCredentials);
+            _swagLabsLoginPage.EnterUsername(inputCredentials);
 
-            _swagLabsLoginPage.SetPasswordAttribute(inputPassword);
+            _swagLabsLoginPage.EnterPassword(inputPassword);
 
             _swagLabsLoginPage.ClickOnLoginButton();
         }
