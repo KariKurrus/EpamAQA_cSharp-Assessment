@@ -1,6 +1,3 @@
-using EpamAQA_cSharp_Assessment.Pages;
-using OpenQA.Selenium.DevTools.V112.Network;
-using FluentAssertions;
 using EpamAQA_cSharp_Assessment.Steps;
 
 namespace EpamAQA_cSharp_Assessment
@@ -14,7 +11,7 @@ namespace EpamAQA_cSharp_Assessment
         public LoginSteps loginSteps;
         public Tests()
         {
-            loginSteps = new LoginSteps();  
+            loginSteps = new LoginSteps();
         }
 
         [Test]
@@ -40,10 +37,10 @@ namespace EpamAQA_cSharp_Assessment
         }
 
         [Test]
-        [TestCase("problem_user", "secret_sauce","Swag Labs")]
+        [TestCase("problem_user", "secret_sauce", "Swag Labs")]
         [TestCase("standard_user", "secret_sauce", "Swag Labs")]
-        [TestCase("performance_glitch_user", "secret_sauce","Swag Labs")]
-        public void VerifyLoggingWithCredentialsPassingThePasswordAndUsernameTest(string inputUsername,string inputPassword, string inputTitle)
+        [TestCase("performance_glitch_user", "secret_sauce", "Swag Labs")]
+        public void VerifyLoggingWithCredentialsPassingThePasswordAndUsernameTest(string inputUsername, string inputPassword, string inputTitle)
         {
             DriverNavigate.GoToSwagLabs();
             loginSteps.LoggingWithCredentialsPassingThePasswordAndUsername(inputUsername, inputPassword);
