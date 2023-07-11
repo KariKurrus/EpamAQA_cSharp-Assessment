@@ -1,5 +1,5 @@
 using EpamAQA_cSharp_Assessment.Steps;
-
+using static EpamAQA_cSharp_Assessment.TextLogger;
 namespace EpamAQA_cSharp_Assessment
 {
 

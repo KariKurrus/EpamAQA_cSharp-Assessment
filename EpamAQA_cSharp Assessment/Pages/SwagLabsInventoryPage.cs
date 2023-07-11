@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using static EpamAQA_cSharp_Assessment.DriverCovering;
+using static EpamAQA_cSharp_Assessment.TextLogger;
 
 namespace EpamAQA_cSharp_Assessment.Pages
 {
@@ -9,6 +10,7 @@ namespace EpamAQA_cSharp_Assessment.Pages
 
         public string GetInventoryTitle()
         {
+            TextLogger.GenerateLogMessage($"{GetmethodCaller(GetmethodCaller())}");
             return _inventoryTitle.Text;
         }
     }
